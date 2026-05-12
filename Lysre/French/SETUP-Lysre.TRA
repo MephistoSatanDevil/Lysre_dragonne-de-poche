@@ -1,21 +1,21 @@
 //.////////////////////////////////////////////
-//Textes lies au fichier d'installation Tp2 //
-//////////////////////////////////////////////   
+//Textes liés au fichier d'installation Tp2 //
+//////////////////////////////////////////////
 
 //Titre///////////////////////////////////////////////////////////
 @0 = ~Lysre MOD PNJ Pour Baldur's Gate 2~
 
 //Textes du NPC///////////////////////////////////////////////////
 @1 = ~Lysre~
-@2 = ~Oh...mais que voila... une destinee singuliere~ [CKLysr01]
+@2 = ~Oh...mais que voilà... une destinée singulière~ [CKLysr01]
 @3 = ~J'ai besoin de prendre un peu de distance~ [CKLysr03]
-@4 = ~Je dois reconnaitre que j'apprecie votre compagnie.~ [CKLysr04]
-@5 = ~Votre comportement est stupide...meme pour un bipede.~ [CKLysr05]
-@6 = ~Votre presence m'insuporte de plus en plus. Bipede.~ [CKLysr6]
-@7 = ~J'en ai assez de votre presence! Au diable le pacte, je prefere m'arracher le coeur que vous supporter une seconde de plus.~ [CKLysr07]
+@4 = ~Je dois reconnaître que j'apprécie votre compagnie.~ [CKLysr04]
+@5 = ~Votre comportement est stupide...même pour un bipède.~ [CKLysr05]
+@6 = ~Votre présence m'insupporte de plus en plus. Bipède.~ [CKLysr6]
+@7 = ~J'en ai assez de votre présence ! Au diable le pacte, je préfère m'arracher le coeur que vous supporter une seconde de plus.~ [CKLysr07]
 @8 = ~Pourquoi moi? Trouvez quelqu'un d'autre...~ [CKLysr08]
 @9 = ~Une sieste s'impose, non?~ [CKLysr09]
-@10 = ~S'il y a une chose de pire que la mort, c'est l'ennui. Je m'ennuie. Allons tuer quelque chose et le manger.~ [CKLysr10]
+@10 = ~S'il y a une chose pire que la mort, c'est l'ennui. Je m'ennuie. Allons tuer quelque chose et le manger.~ [CKLysr10]
 @11 = ~Voici les offrandes pour Tiamat!~ [CKLysr11]
 @12 = ~J'avais justement faim!~ [CKLysr12]
 @13 = ~Chaque vie a une fin.~ [CKLysr13]
@@ -23,11 +23,11 @@
 @15 = ~Croc~ [CKLysre15]
 @16 = ~~ // Douleur[]
 @17 = ~~ //Mort []
-@18 = ~J'aurais besoin d'un Clerc, j'y voit trouble...~ [CKLysr18]
+@18 = ~J'aurais besoin d'un Clerc, j'y vois trouble...~ [CKLysr18]
 @19 = ~J'aime les arbres, ils sont pleins de proies qui n'attendent que mes crocs...~ [CKLysre19]
 @20 = ~Tsk! Pourquoi perdre notre temps ici... On ne peut rien y tuer... Enfin, officiellement.~ [CKLysr20]
-@21 = ~J'aime cette ambiance, elle me rapelle un peu mon premier nid.~ [CKLysr21]
-@22 = ~Ah, quel douceur... Je me sens somnolante~ [CKLysr22]
+@21 = ~J'aime cette ambiance, elle me rappelle un peu mon premier nid.~ [CKLysr21]
+@22 = ~Ah, quelle douceur... Je me sens somnolente~ [CKLysr22]
 @23 = ~Haaa, la nuit... le meilleur moment pour la chasse.~ [CKLysr23]
 @24 = ~Pardon ?~ [CKLysr24]
 @25 = ~Entendu.~ [CKLysr25]
@@ -38,12 +38,12 @@
 @30 = ~Craignez moi.~ [CKLysr30]
 @31 = ~S'il faut le faire.~ [CKLysr31]
 @32 = ~*soupire*~ [CKLysr32]
-@33 = ~J'accepte, je n'obei pas.~ [CKLysr33]
+@33 = ~J'accepte, je n'obéis pas.~ [CKLysr33]
 @34 = ~Taisez vous, j'ai compris.~ [CKLysr34]
 @35 = ~Encore moi?~ [CKLysr35]
 @36 = ~Je ne sais pas vous, mais je tuerai bien quelque chose~ [CKLysr36]
-@37 = ~Un jour, Tiamat ravagera ces terres. J'ai hate.~ [CKLysr37]
-@38 = ~La compagnie de bipede n'est pas insuportable finalement.~ [CKLysr38]
+@37 = ~Un jour, Tiamat ravagera ces terres. J'ai hâte.~ [CKLysr37]
+@38 = ~La compagnie de bipède n'est pas insupportable finalement.~ [CKLysr38]
 @39 = ~Ca fait mal, n'est ce pas?~ [CKLysr39]
 @40 = ~Tsk!~ [CKLysr40]
 @41 = ~Mes attaques sont inutiles... Tsk!~ [CKLysr41]
@@ -51,194 +51,196 @@
 @43 = ~Maudit ! J'incantais !~ [CKLysr43]
 
 //BACKGROUND///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@44 = ~Interrogee sur son passe, LYSRE vous toise, avant d'aborder son eternel sourire carnassier. "Je suis morte, on m'a abattue, bafouee, dechiquetee, mais j'avais la flamme. J'y ai laisse une bonne partie de son souffle et j'ai survecu. Je suis revenue. Et je ceuille chaque jour les etincelles qui me permettront de plonger mes crocs dans le coeur de ceux qui m'ont reduite a cette forme." Un sifflement de colere et de flamme s'echappe de sa gueule. "Laissez moi"~
+@44 = ~Interrogée sur son passé, LYSRE vous toise, avant d'aborder son éternel sourire carnassier. "Je suis morte, on m'a abattue, bafouée, déchiquetée, mais j'avais la flamme. J'y ai laissé une bonne partie de son souffle et j'ai survécu. Je suis revenue. Et je cueille chaque jour les étincelles qui me permettront de plonger mes crocs dans le coeur de ceux qui m'ont réduite à cette forme." Un sifflement de colère et de flamme s'échappe de sa gueule. "Laissez moi"~
 
 //EPILOGUE///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@45 = ~Satisfaite de sa vengeance et de la conclusion de son histoire aupres de CHARNAME, Lysre poursuivit un moment ses contrats constatant helas que rare etait ceux capable de rivaliser a la compagnie d'un enfant de Bhaal. Elle pris finalement sa retraite dans une caverne sous marine ou elle acheva d'entasser toujours plus de tresors et d'ames damnees. Jusqu'a ce qu'au bout de quelques decennies, l'acharnement des aventuriers l'obligeront a disparaitre du plan materiel, n'emportant que sa couvee.~
+@45 = ~Satisfaite de sa vengeance et de la conclusion de son histoire auprès de CHARNAME, Lysre poursuivit un moment ses contrats constatant hélas que rare était ceux capable de rivaliser à la compagnie d'un enfant de Bhaal. Elle prit finalement sa retraite dans une caverne sous-marine ou elle acheva d'entasser toujours plus de trésors et d'âmes damnées. Jusqu'à ce qu'au bout de quelques décennies, l'acharnement des aventuriers l'obligent à disparaître du plan matériel, n'emportant que sa couvée.~
 
 
 //KIT///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @46 = ~Disciple de Tiamat~
-@47 = ~DISCIPLE DE TIAMAT : 
-Il existe quelques dragons qui vouent un veritable culte a Tiamat, leur ancetre dragon, et deesse des dragons chromatiques. Ces dragons gagnent leur pouvoir en viellissant, mais egalement en tuant et en realisant des offrandes frequentes a leur Deese. Meme les plus jeunes sont capables de maitriser rapidement la sorcelerie tout en developpant leurs capacites naturelles de dragons.
+@47 = ~DISCIPLE DE TIAMAT :
+Il existe quelques dragons qui vouent un véritable culte à Tiamat, leur ancêtre dragon, et déesse des dragons chromatiques. Ces dragons gagnent leur pouvoir en vieillissant, mais également en tuant et en réalisant des offrandes fréquentes à leur Déesse. Même les plus jeunes sont capables de maîtriser rapidement la sorcellerie tout en développant leurs capacités naturelles de dragons.
 
 Avantages :
-- Des de vie : d6.
-- Niveau 1 : Bonus de +1 a la Classe d'armure.
+- Dés de vie : d6.
+- Niveau 1 : Bonus de +1 à la Classe d'armure.
 - Niveau 3 : Attaque de souffle une fois par jour.
-- Dispose d'armes naturelles, griffes empoisonnees, crachats acide.
+- Dispose d'armes naturelles, griffes empoisonnées, crachats acides.
 
 ATTAQUES DE SOUFFLE :
-Le Disciple de Tiamat dispose de son souffle de dragon naturel et d'un second souffle draconique d'un autre element (Lysre est concernee par le feu).
-Le dragon crache un souffle qui mesure 9 m de longueur. Le souffle inflige 3D6 degats eleementaire a toutes les creatures prises dans le cone de 140 degres.
+Le Disciple de Tiamat dispose de son souffle de dragon naturel et d'un second souffle draconique d'un autre élément (Lysre est concernée par le feu).
+Le dragon crache un souffle qui mesure 9 m de longueur. Le souffle inflige 3D6 dégâts élémentaires à toutes les créatures prises dans le cône de 140 degrés.
 
-- Niveau 4 : 25 % de resistance au feu.
-- Niveau 5 : Bonus de +1 a la Classe d'armure et a la Constitution.
-- Niveau 6 : Les degats de l'attaque de souffle augmentent jusqu'a 4d8.
-- Niveau 8 : 50 % de resistance au feu.
-- Niveau 9 : Les degats de l'attaque de souffle augmentent jusqu'a 5d8.
-- Niveau 10 : Bonus de +1 a la Classe d'armure.
-- Niveau 12 : Les degats de l'attaque de souffle augmentent jusqu'a 6d8.
-- Niveau 12 : 75 % de resistance au feu.
-- Niveau 15 : Les degats de l'attaque de souffle augmentent jusqu'a 7d8.
-- Niveau 15 : Bonus de +1 a la Classe d'armure et a la Constitution.
-- Niveau 16 : 100 % de resistance au feu.
-- Niveau 18 : Les degats de l'attaque de souffle augmentent jusqu'a 8d8.
-- Niveau 20 : Bonus de +1 a la Classe d'armure.
+- Niveau 4 : 25 % de résistance au feu.
+- Niveau 5 : Bonus de +1 à la Classe d'armure et à la Constitution.
+- Niveau 6 : Les dégâts de l'attaque de souffle augmentent jusqu'à 4d8.
+- Niveau 8 : 50 % de résistance au feu.
+- Niveau 9 : Les dégâts de l'attaque de souffle augmentent jusqu'à 5d8.
+- Niveau 10 : Bonus de +1 à la Classe d'armure.
+- Niveau 12 : Les dégâts de l'attaque de souffle augmentent jusqu'à 6d8.
+- Niveau 12 : 75 % de résistance au feu.
+- Niveau 15 : Les dégâts de l'attaque de souffle augmentent jusqu'à 7d8.
+- Niveau 15 : Bonus de +1 à la Classe d'armure et à la Constitution.
+- Niveau 16 : 100 % de résistance au feu.
+- Niveau 18 : Les dégâts de l'attaque de souffle augmentent jusqu'à 8d8.
+- Niveau 20 : Bonus de +1 à la Classe d'armure.
 
-Inconvenients :
-- Ne peut pas apprendre plus de 4 sorts par niveau de sort. 
+Inconvénients :
+- Ne peut pas apprendre plus de 4 sorts par niveau de sort.
 - Ne peut porter que des anneaux, collier et gemme ionique~
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Objets      @2xxx                         //
 //////////////////////////////////////////////
-@2000 =  ~Ecailles de dragonne juvenile~
-@2001 =  ~Le corps de Lysre et recouvert de splendides ecailles noires, qui, exposees a la lumiere brillent de reflets emeraudes. 
-Chacune semble parfaitement imbriquee avec ses voisines pour former une armure naturelle impenetrable.
-Vous vous surprenez a vouloir approcher votre main, ce qui attire immediatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entreouvre sa gueule pour laisser l'acide goutter de sa machoire.
+@2000 =  ~Écailles de dragonne juvénile~
+@2001 =  ~Le corps de Lysre est recouvert de splendides écailles noires, qui, exposées à la lumière brillent de reflets émeraudes.
+Chacune semble parfaitement imbriquée avec ses voisines pour former une armure naturelle impénétrable.
+Vous vous surprenez à vouloir approcher votre main, ce qui attire immédiatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entrouvre sa gueule pour laisser l'acide goutter de sa mâchoire.
 
 "Que ce soit clair <CHARNAME>. Vous ne me toucherez pas sans y laisser un doigt."~
 
 //////////////////////////////////////////////
-@2002 =  ~Ecailles de dragonne Bleu-Nuit~
-@2003 =  ~Vous remarquez quelques ecailles aux beaux reflets bleus, qui se concentrent autour des ailes de Lysre.
-Nul doute, elles sont apparues peu de temps apres qu'elle se soit delectee du cadavre d'Abazigal.
-Vous vous surprenez a vouloir approcher votre main, ce qui attire immediatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entreouvre sa gueule pour laisser l'acide goutter de sa machoire.
+@2002 =  ~Écailles de dragonne Bleu-Nuit~
+@2003 =  ~Vous remarquez quelques écailles aux beaux reflets bleus, qui se concentrent autour des ailes de Lysre.
+Nul doute, elles sont apparues peu de temps après qu'elle se soit délectée du cadavre d'Abazigal.
+Vous vous surprenez à vouloir approcher votre main, ce qui attire immédiatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entrouvre sa gueule pour laisser l'acide goutter de sa mâchoire.
 
 "Que ce soit clair <CHARNAME>. Vous ne me toucherez pas sans y laisser un doigt."
 
-PARAMETRES :
+PARAMÈTRES :
 
-Bonus : +20 % de resistance a l'electricite~
+Bonus : +20 % de résistance à l'électricité~
 
 //////////////////////////////////////////////
-@2004 =  ~Ecailles de dragonne Ocre~
-@2005 =  ~Depuis le jour ou Lysre a devorer la depouille de Firkraag, certaines de ses ecailles, principalement le long de son echine ont pris une teinte rougeatre.
-Vous vous surprenez a vouloir approcher votre main, ce qui attire immediatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entreouvre sa gueule pour laisser l'acide goutter de sa machoire.
+@2004 =  ~Écailles de dragonne Ocre~
+@2005 =  ~Depuis le jour où Lysre a dévoré la dépouille de Firkraag, certaines de ses écailles, principalement le long de son échine, ont pris une teinte rougeâtre.
+Vous vous surprenez à vouloir approcher votre main, ce qui attire immédiatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entrouvre sa gueule pour laisser l'acide goutter de sa mâchoire.
 
 "Que ce soit clair <CHARNAME>. Vous ne me toucherez pas sans y laisser un doigt."
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'Armure : 8~
 
 //////////////////////////////////////////////
-@2006 =  ~Ecailles de dragonne Grise~
-@2007 =  ~Vous remarquez quelques ecailles grises aussi lisses et brillantes que des perles sur le ventre de Lysre.
-Nul doute, elles sont apparues peut de temps apres qu'elle ai devore sans appetit la depouille d'Adalon.
-Vous vous surprenez a vouloir approcher votre main, ce qui attire immediatement l'attention de Lysre, qui fixe ses deux yeux spectraux dans votre direction. Elle entreouvre sa gueule pour laisser l'acide goutter de sa machoire.
+@2006 =  ~Écailles de dragonne Grise~
+@2007 =  ~Vous remarquez quelques écailles grises aussi lisses et brillantes que des perles sur le ventre de Lysre.
+Nul doute, elles sont apparues peu de temps après qu'elle ait dévoré sans appétit la dépouille d'Adalon.
+Vous vous surprenez à vouloir approcher votre main, ce qui attire immédiatement l'attention de Lysre, qui fixe ses deux yeux spectraux dans votre direction. Elle entrouvre sa gueule pour laisser l'acide goutter de sa mâchoire.
 
 "Que ce soit clair <CHARNAME>. Vous ne me toucherez pas sans y laisser un doigt."
 
-PARAMETRES :
+PARAMÈTRES :
 
-Bonus : +20 % de resistance au froid~
+Bonus : +20 % de résistance au froid~
 
 //////////////////////////////////////////////
-@2008 =  ~Griffes de dragonne juvenile~
+@2008 =  ~Griffes de dragonne juvénile~
 @2009 =  ~Votre regard est attire par les griffes d'un blanc pur qui contrastent avec le sombre emeraude des ecailles de Lysre.
-Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissees sur les victimes de Lysre, elles sont aussi tranchantes que des lames de rasoir.~
+Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissées sur les victimes de Lysre, elles sont aussi tranchantes que des lames de rasoir.~
 @2010 =  ~Votre regard est attire par les griffes d'un blanc pur qui contrastent avec le sombre emeraude des ecailles de Lysre.
-Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissees sur les victimes de Lysre, elles sont aussi tranchantes que des lames de rasoir.
-PARAMETRES : 
+Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissées sur les victimes de Lysre, elles sont aussi tranchantes que des lames de rasoir.
 
-DEGATS: 1d6 +1
-Thac0: +2
+PARAMÈTRES :
+
+Dégâts: 1d6 +1
+THAC0: +2
 25% de chance d'empoisonner la victime pendant 10 secondes
 Vitesse : 1
 Type de dommages: Tranchant/Perforant~
 
 //////////////////////////////////////////////
-@2011 =  ~Acide de dragonne juvenile~
-@2012 =  ~Alors que vous fixez Lysre, sa gueule commence a deborder d'un liquide brunatre qui goutte jusqu'au sol ou elle crepite. Elle crache au sol dans votre direction un peu d'acide comme une invitation a cesser de la defier du regard.
-PARAMETRES :
+@2011 =  ~Acide de dragonne juvénile~
+@2012 =  ~Alors que vous fixez Lysre, sa gueule commence à déborder d'un liquide brunâtre qui goutte jusqu'au sol où elle crépite. Elle crache au sol dans votre direction un peu d'acide comme une invitation à cesser de la défier du regard.
 
-DEGATS: 1d4 (+1 d'acide)
-Thac0: +3
+PARAMÈTRES :
+
+Dégâts: 1d4 (+1 d'acide)
+THAC0: +3
 Vitesse : 1
 Type de dommages: Perforant  ~
 
 
 //////////////////////////////////////////////
 @2013 =  ~Pattes de dragonne d'ombre~
-@2014 =  ~Depuis que Lysre a devorer le cadavre de Thaxll'ssillyia vous avez remarque que les pointes de ses ecailles sont comme etherees. Ce phenomene est encore plus visibles autour de ses pattes, qui semblent entouree de plumes d'ombres. 
+@2014 =  ~Depuis que Lysre a dévoré le cadavre de Thaxll'ssillyia vous avez remarqué que les pointes de ses écailles sont comme éthérées. Ce phénomène est encore plus visible autour de ses pattes, qui semblent entourées de plumes d'ombres.
 
-PARAMETRES :
+PARAMÈTRES :
 
-Bonus : Indetectable.
+Bonus : Indétectable.
         Pas de l'ombre 3x par jour ~
 
 //////////////////////////////////////////////
 @2015 =  ~Boucle de cheveux~
-@2016 =  ~Une boucle de cheveux d'une etrange couleur emeraude qui est nouee avec soin autour d'une des pattes de Lysre.
+@2016 =  ~Une boucle de cheveux d'une étrange couleur émeraude qui est nouée avec soin autour d'une des pattes de Lysre.
 A la moindre tentative de vous en saisir, la dragonne tente de trancher vos doigts avec ses crocs.~
 
 //////////////////////////////////////////////
 @2017 =  ~Bille d'acide~
-@2018 =  ~Cette bille est constitue d'un acide de dragon petrifie. Vous sentez la magie pulser dans cette bille, ce qui le rendent mieux equilibree et etrangement legere.
+@2018 =  ~Cette bille est constituée d'un acide de dragon pétrifié. Vous sentez la magie pulser dans cette bille, ce qui la rend mieux équilibrée et étrangement légère.
 Elle file contre votre adversaire et quand elle le frappe, elle explose dans un nuage acide.
 
-PARAMeTRES :
+PARAMÈTRES :
 
-Deg�ts : 1D4 + 2, +2 d'acide
-TAC0 : +1
-Type de deg�ts : projectile (perforant)
+Dégâts : 1D4 + 2, +2 d'acide
+THAC0 : +1
+Type de dégâts : projectile (perforant)
 Poids : 0
 Arme de jet : fronde~
 
 //////////////////////////////////////////////
-@2019 =  ~Ecailles de dragonne Pourpre~
-@2020 =  ~Depuis le jour ou Lysre a devorer son second dragon rouge, certaines de ses ecailles, principalement le long de son echine ont pris une teinte rouge sang.
-Vous vous surprenez a vouloir approcher votre main, ce qui attire immediatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entreouvre sa gueule pour laisser l'acide goutter de sa machoire.
+@2019 =  ~Écailles de dragonne Pourpre~
+@2020 =  ~Depuis le jour où Lysre a dévoré son second dragon rouge, certaines de ses écailles, principalement le long de son échine, ont pris une teinte rouge sang.
+Vous vous surprenez à vouloir approcher votre main, ce qui attire immédiatement l'attention de Lysre, qui fixe ses deux yeux d'ivoire dans votre direction. Elle entrouvre sa gueule pour laisser l'acide goutter de sa mâchoire.
 
 "Que ce soit clair <CHARNAME>. Vous ne me toucherez pas sans y laisser un doigt."
 
-PARAMETRES :
+PARAMÈTRES :
 
 Classe d'Armure : 6~
 
 //////////////////////////////////////////////
 @2021 =  ~Griffes de dragonne noire~
 @2022 =  ~Votre regard est attire par les griffes d'un noir onyx de Lysre.
-Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissees sur les victimes de Lysre, elles sont aussi tranchantes que corrosives.
-PARAMETRES :
+Inutile de toucher ces armes naturelles que la dragonne nettoie tout en survolant sur place. A en croire les plaies laissées sur les victimes de Lysre, elles sont aussi tranchantes que corrosives.
+PARAMÈTRES :
 
-DEGATS: 1d6 +3
-Thac0: +2
+Dégâts : 1d6 +3
+THAC0 : +2
 40% de chance d'empoisonner la victime pendant 10 secondes
 Vitesse : 1
 Type de dommages: Tranchant/Perforant~
 //////////////////////////////////////////////
 
 @2023 =  ~Clef de prison~
-@2024 =  ~Clef des menottes d'une prisonniere... N'allons pas chercher comment vous avez mit la main dessus~
+@2024 =  ~Clef des menottes d'une prisonnière... N'allons pas chercher comment vous avez mit la main dessus~
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Sorts      @3xxx                          //
 //////////////////////////////////////////////
 @3000 =  ~Souffle de dragon Noir~
-@3001 =  ~Lysre crache une brume acide qui mesure 9 metres de longueur. Le souffle inflige 3d6 degats d'acide a toutes les creatures prises dans le cone de 140 degres.
+@3001 =  ~Lysre crache une brume acide qui mesure 9 mètres de longueur. Le souffle inflige 3d6 dégâts d'acide a toutes les créatures prises dans le cône de 140 degrés.
 
-- Niveau 6 : Les degats de l'attaque de souffle augmentent jusqu'a 4d8.
-- Niveau 9 : Les degats de l'attaque de souffle augmentent jusqu'a 5d8.
-- Niveau 12 : Les degats de l'attaque de souffle augmentent jusqu'a 6d8.
-- Niveau 15 : Les degats de l'attaque de souffle augmentent jusqu'a 7d8.
-- Niveau 18 : Les degats de l'attaque de souffle augmentent jusqu'a 8d8.~
+- Niveau 6 : Les dégâts de l'attaque de souffle augmentent jusqu'à 4d8.
+- Niveau 9 : Les dégâts de l'attaque de souffle augmentent jusqu'à 5d8.
+- Niveau 12 : Les dégâts de l'attaque de souffle augmentent jusqu'à 6d8.
+- Niveau 15 : Les dégâts de l'attaque de souffle augmentent jusqu'à 7d8.
+- Niveau 18 : Les dégâts de l'attaque de souffle augmentent jusqu'à 8d8.~
 
 //////////////////////////////////////////////
-@3002 =  ~Benediction de Tiamat~
+@3002 =  ~Bénédiction de Tiamat~
 @3003 =  ~Niveau : 1
-Sphere : soins
-Portee : toucher
-Duree : permanente
-Temps d'incantation : Immediat
-Zone d'effet : creature touchee
+Sphère : soins
+Portée : toucher
+Durée : permanente
+Temps d'incantation : Immédiat
+Zone d'effet : créature touchée
 Jet de sauvegarde : aucun
-Ce pouvoir mineur a ete accorde a Lysre par Tiamat, reine des dragons, pour sa chasse aux dragons metaliques.
-D'un contact, Lysre soigne 1d8 points de blessures ou autres degats infliges au corps de la creature touchee. Cette guerison ne concerne pas les creatures depourvues d'enveloppe corporelle, ni les blessures des creatures non-vivantes ou originaires d'outreplan.
-La guerison n'est definitive que dans la mesure o� la creature ne subit pas d'autres degats ; les blessures provoquees se cicatriseront (ou peuvent etre soignees) comme n'importe quelle blessure normale.~
+Ce pouvoir mineur a été accordé a Lysre par Tiamat, reine des dragons, pour sa chasse aux dragons métalliques.
+D'un contact, Lysre soigne 1d8 points de blessures ou autres dégâts infligés au corps de la créature touchée. Cette guérison ne concerne pas les créatures dépourvues d'enveloppe corporelle, ni les blessures des créatures non-vivantes ou originaires d'outre-plan.
+La guérison n'est définitive que dans la mesure où la créature ne subit pas d'autres dégâts ; les blessures provoquées se cicatriseront (ou peuvent être soignées) comme n'importe quelle blessure normale.~
 
 //////////////////////////////////////////////
 @3004 =  ~~
@@ -253,13 +255,13 @@ La guerison n'est definitive que dans la mesure o� la creature ne subit pas d'au
 
 
 //////////////////////////////////////////////
-//Parametrage Weidu   @-1xxx                //
+//Paramétrage Weidu   @-1xxx                //
 //////////////////////////////////////////////
 
 @-1000= "Le mod %TP2_FILE_NAME% contient"
 @-1001= "composants optionnels distincts.
 Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
-au niveau general plutot que de repondre aux questions pour chacun.
+au niveau général plutôt que de répondre aux questions pour chacun.
 "
 @-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
 Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "

@@ -1,14 +1,14 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Dialogue du garde de la prison (Quete NPC) ////////////////////////////////////////////////////////////////////////////
+// Dialogue du garde de la prison (Quête NPC) ////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN CKGarde
 
 IF ~Global("CKclef","LOCALS",0)~ THEN BEGIN CKGarde1
-  SAY ~*Ce garde a, a sa ceinture, un trousseau de clefs. Il remarque votre presence.* Vous n'avez rien a faire ici, partez !~
+  SAY ~*Ce garde a, à sa ceinture, un trousseau de clefs. Il remarque votre présence.* Vous n'avez rien à faire ici, partez !~
   IF ~~ THEN DO ~SetGlobal("CKclef","LOCALS",1)~  EXIT
 END
 
 IF ~Global("CKclef","LOCALS",1)~ THEN BEGIN CKGarde2
-  SAY ~Je vous ai dit de circuler. Vous n'avez rien a faire ici.~
+  SAY ~Je vous ai dit de circuler. Vous n'avez rien à faire ici.~
   IF ~~ THEN EXIT
 END

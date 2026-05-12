@@ -1,188 +1,225 @@
 BACKUP ~Lysre/Backup~
+
 AUTHOR ~Mod NPC : Lysre
 Auteur : Klare.
 Avec l'aide de Deratiseur de la Couronne de Cuivre
 Avec le doublage de Zyl de la Couronne de Cuivre
 Sur la base du mod Brawen NPC~
 
-VERSION ~1.0~
-//Bloc de controle 1  //////////////////////////////////////
-ALWAYS                                                    //
-  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN         //
-    ACTION_IF GAME_IS ~eet~ BEGIN                         //
-      OUTER_SET bg2_chapter = 12                          //
-    END ELSE BEGIN                                        //
-      OUTER_SET bg2_chapter = 0                           //
-    END                                                   //
-    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN                   //
-      OUTER_SET bg2_chapter = bg2_chapter + 1             //
-      OUTER_SPRINT name_source ~bg2_chapter_%i%~          //
-      OUTER_SET EVAL ~%name_source%~ = bg2_chapter        //
-    END                                                   //
-  END                                                     //
-END                                                       //
-//Fin du Bloc de controle 1/////////////////////////////////
 
-//Bloc de controle 2 : neccessaire au Kit///////////////////
-ALWAYS                                                    //
-	INCLUDE ~Lysre/Kit/fl#add_kit_ee.tpa~             //
-END                                                       //
-////////////////////////////////////////////////////////////
+// README ~~
 
-//Langues et traductions possibles  ////////////////////////////////////
-AUTO_TRA ~Lysre/%s~                                                   //
-LANGUAGE ~French~  ~French~  ~Lysre/French/Setup-Lysre.tra~           //
-// Fin bloc langues  ///////////////////////////////////////////////////
+VERSION ~1.3~
+
+///////////////////////////////////////////////////////////
+
+ALWAYS
+
+//Bloc de controle 1///////////////////////////////////////
+
+	ACTION_IF GAME_IS ~eet~ BEGIN
+			OUTER_SET bg2_chapter = 12
+	END ELSE BEGIN
+			OUTER_SET bg2_chapter = 0
+	END
+			OUTER_FOR (i = 1 ; i <= 10 ; ++i) BEGIN
+			OUTER_SET bg2_chapter = bg2_chapter + 1
+			OUTER_SPRINT name_source ~bg2_chapter_%i%~
+			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+	END
+
+//Fin du Bloc de controle 1 ///////////////////////////////
+
+//Bloc de controle 2 : neccessaire au Kit /////////////////
+
+	INCLUDE ~Lysre/Kit/fl#add_kit_ee.tpa~
+
+//Fin du Bloc de controle 2 ///////////////////////////////
+
+END // ALWAYS
+
+///////////////////////////////////////////////////////////
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-BEGIN       @0                                                                                                                    //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+//Langues et traductions possibles  ///////////////////////
+
+AUTO_TRA ~Lysre/%s~
+
+LANGUAGE ~French~  ~French~  ~Lysre/French/Setup-Lysre.tra~
+
+// Fin bloc langues  ////////////////////////////////////////
+
+
+
+BEGIN @0
 
 ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
 LOAD_TRA ~Lysre/%LANGUAGE%/Setup-Lysre-EE.tra~
 ADD_JOURNAL @24 USING ~Lysre/%LANGUAGE%/CKLysre.tra~
 END
 
-APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
-UNLESS ~CD_STATE_NOTVALID~
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 
 //Ajout des NPC de la quete 1////////////////////////////////////////////////////////////
+
 COPY    ~Lysre/Characters/Intro/CKMORTIN.cre~ ~override/CKMORTIN.cre~ //Ajout du perso //
-  SAY NAME1 ~Mortin~                                                                   //
-  SAY NAME2 ~Mortin~                                                                   //
-COMPILE ~Lysre/Dialogue/Intro/CKMORTIN.d~ //Ajout dialogue                             //
+  SAY NAME1 ~Mortin~
+  SAY NAME2 ~Mortin~
+COMPILE ~Lysre/Dialogue/Intro/CKMORTIN.d~ //Ajout dialogue
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 //Ajout des NPC de la quete 1////////////////////////////////////////////////////////////
-COMPILE ~Lysre/Scripts/Quete1/CKFelicP.baf~ //Ajout du script de sortie map            //
-//Pretresse emprisonnÈe                                                                //
-COPY    ~Lysre/Characters/Quete1/CKFelici.cre~ ~override/CKFelici.cre~ //Ajout du perso//
-  SAY NAME1 ~Felicia~                                                                  //
-  SAY NAME2 ~Felicia~                                                                  //
-COMPILE ~Lysre/Dialogue/Quete1/CKFelici.d~ //Ajout dialogue                            //
-//une fois libre                                                                       //
-COPY    ~Lysre/Characters/Quete1/CKFelic2.cre~ ~override/CKFelic2.cre~ //Ajout du perso//
-  SAY NAME1 ~Felicia~                                                                  //
-  SAY NAME2 ~Felicia~                                                                  //
-COMPILE ~Lysre/Dialogue/Quete1/CKFelic2.d~ //Ajout dialogue                            //
-                                                                                       //
-//Ajout des suivants                                                                   //
-COPY    ~Lysre/Characters/Quete1/CKFidelF.cre~ ~override/CKFidelF.cre~ //Ajout du perso//
-  SAY NAME1 ~Adepte de tiamat~                                                         //
-  SAY NAME2 ~Adepte de tiamat~                                                         //
-COPY    ~Lysre/Characters/Quete1/CKFidelH.cre~ ~override/CKFidelH.cre~ //Ajout du perso//
-  SAY NAME1 ~Adepte de tiamat~                                                         //
-  SAY NAME2 ~Adepte de tiamat~                                                         //
-COMPILE ~Lysre/Dialogue/Quete1/CKfidele.d~ //Ajout dialogue                            //
-                                                                                       //
-//Ajout du garde en prison                                                             //
-COPY    ~Lysre/Characters/Quete1/CKBAMN.cre~ ~override/CKBAMN.cre~ //Ajout du personn  //
-  SAY NAME1 ~Gardien~                                                                  //
-  SAY NAME2 ~Gardien~                                                                  //
-COMPILE ~Lysre/Dialogue/Quete1/CKGarde.d~ //Ajout dialogue                             //
-//Ajout des kobolds                                                                    //
-COPY    ~Lysre/Characters/Quete1/CKKobold.cre~ ~override/CKKobold.cre~ //Ajout du perso//
-  SAY NAME1 ~Kobold~                                                                   //
-  SAY NAME2 ~Kobold~                                                                   //
-COPY    ~Lysre/Characters/Quete1/CKKobol2.cre~ ~override/CKKobol2.cre~ //Ajout du perso//
-  SAY NAME1 ~Shaman Kobold~                                                            //
-  SAY NAME2 ~Shaman Kobold~                                                            //                                                          //
-COPY    ~Lysre/Characters/Quete1/CKVarsco.cre~ ~override/CKVarsco.cre~ //Ajout du perso//
-  SAY NAME1 ~Varscona~                                                         //
-  SAY NAME2 ~Varscona~                                                         //
-COMPILE ~Lysre/Dialogue/Quete1/CKVarsco.d~ //Ajout dialogue                            //
-/////////////////////////////////////////////////////////////////////////////////////////
 
-//Ajout de la fonction temple de Tiamat//////////////////////////////////////////////////
-COPY ~Lysre/boutiques/CKtiamat.STO~ ~override/CKtiamat.STO~                            //
-  SAY NAME2 ~Temple de Tiamat~                                                         //
-/////////////////////////////////////////////////////////////////////////////////////////
+COMPILE ~Lysre/Scripts/Quete1/CKFelicP.baf~ //Ajout du script de sortie map
 
-//Ajout des ecailles manquantes aux dragons///////////////////////////////////////////////////////////////////
-//Irenicus                                                                                                  //
-COPY_EXISTING ~DRAGBLAC.cre~ ~override/DRAGBLAC.cre~                                                        //
-  ADD_CRE_ITEM ~SCALEB~ #0 #0 #0 ~IDENTIFIED~ ~INV15~                                                       //
-//  ADD_CRE_ITEM ~Nom de l'item~ #charge1 #charge2 #charge3 ~Flags~ ~Inventory Slots~ [EQUIP] [TWOHANDED]   //
-//Saladrex TdG                                                                                              //
-COPY_EXISTING ~GORSAL.cre~ ~override/GORSAL.cre~                                                            //
-  ADD_CRE_ITEM ~SCALER~ #0 #0 #0 ~IDENTIFIED~ ~INV15~                                                       //
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Pretresse emprisonn√©e
+COPY    ~Lysre/Characters/Quete1/CKFelici.cre~ ~override/CKFelici.cre~ //Ajout du perso
+  SAY NAME1 ~F√©licia~
+  SAY NAME2 ~F√©licia~
 
-//Ajout du PC dragon. Lysre ///////////////////////////////////////////////////////////////////////////////////////////
-COPY ~Lysre/Portrait~ ~override~ //Ajout des portait                                                                 //
-COPY ~Lysre/Characters/CKLysre.cre~ ~override/CKLysre.cre~                                                           //
-SAY NAME1 @1                                                                                                         //
-SAY NAME2 @1                                                                                                         //
-SAY INITIAL_MEETING @2                                                                                               //
-SAY MORALE @3                                                                                                        //
-SAY HAPPY @4                                                                                                         //
-SAY UNHAPPY_ANNOYED @5                                                                                               //
-SAY UNHAPPY_SERIOUS @6                                                                                               //
-SAY UNHAPPY_BREAKING @7                                                                                              //
-SAY LEADER @8                                                                                                        //
-SAY TIRED @9                                                                                                         //
-SAY BORED @10                                                                                                        //
-SAY BATTLE_CRY1 @11                                                                                                  //
-SAY BATTLE_CRY2 @12                                                                                                  //
-SAY BATTLE_CRY3 @13                                                                                                  //
-SAY BATTLE_CRY4 @14                                                                                                  //
-SAY BATTLE_CRY5 @15                                                                                                  //
-SAY DAMAGE @16                                                                                                       //
-SAY DYING @17                                                                                                        //
-SAY HURT @18                                                                                                         //
-SAY AREA_FOREST @19                                                                                                  //
-SAY AREA_CITY @20                                                                                                    //
-SAY AREA_DUNGEON @21                                                                                                 //
-SAY AREA_DAY @22                                                                                                     //
-SAY AREA_NIGHT @23                                                                                                   //
-SAY SELECT_COMMON1 @24                                                                                               //
-SAY SELECT_COMMON2 @25                                                                                               //
-SAY SELECT_COMMON3 @26                                                                                               //
-SAY SELECT_COMMON4 @27                                                                                               //
-SAY SELECT_COMMON5 @28                                                                                               //
-SAY SELECT_COMMON6 @29                                                                                               //
-SAY SELECT_ACTION1 @30                                                                                               //
-SAY SELECT_ACTION2 @31                                                                                               //
-SAY SELECT_ACTION3 @32                                                                                               //
-SAY SELECT_ACTION4 @33                                                                                               //
-SAY SELECT_ACTION5 @34                                                                                               //
-SAY SELECT_ACTION6 @35                                                                                               //
-SAY SELECT_ACTION7 @36                                                                                               //
-SAY SELECT_RARE1 @37                                                                                                 //
-SAY SELECT_RARE2 @38                                                                                                 //
-SAY CRITICAL_HIT @39                                                                                                 //
-SAY CRITICAL_MISS @40                                                                                                //
-SAY TARGET_IMMUNE @41                                                                                                //
-SAY INVENTORY_FULL @42                                                                                               //
-SAY SPELL_DISRUPTED @43                                                                                              //
-SAY BIO @44                                                                                                          //
-//Test programme                                                                                                     //
-WRITE_ASCII 0x248 ~CKLysreS~ #8  // override script where you put all the commands for lovetalks and such.           //
-WRITE_ASCII 0x2cc ~CKLysre~  #8  // dialogue file where we'll put Branwen's greeting dialogue.                       //
-WRITE_ASCII 0x280 ~CKLysre~  #32 // death variable - when we want to refer to Branwen in the game                    //
-                                                                                                                     //
-COMPILE EVALUATE_BUFFER ~Lysre/Dialogue/BCKLysre.d~                                                                  //
-	                ~Lysre/Dialogue/CKLysre.d~                                                                   //
-	                ~Lysre/Dialogue/CKLysreJ.d~                                                                  //
-	                ~Lysre/Dialogue/CKLysreP.d~                                                                  //
-               	        ~Lysre/Scripts/CKLysreF.baf~                                                                 //
-	                ~Lysre/Scripts/CKLysreS.baf~                                                                 //
-                                                                                                                     //
-//Modification des maps ///////////////////////////////////////////////////////////////////////////////////////////////
+COMPILE ~Lysre/Dialogue/Quete1/CKFelici.d~ //Ajout dialogue
 
-//Apparition du PC et des NPC ///////////////////////////////
-//Lysre                                                    //
-EXTEND_TOP ~AR0710.bcs~ ~Lysre/Scripts/AR0710.baf~         //
-//NPC quete 1                                              //
-EXTEND_TOP ~AR0202.bcs~ ~Lysre/Scripts/AR0202.baf~         //
-EXTEND_TOP ~AR1005.bcs~ ~Lysre/Scripts/AR1005.baf~ //Prison//
-EXTEND_TOP ~AR0406.bcs~ ~Lysre/Scripts/AR0406.baf~ //CdC   //
-/////////////////////////////////////////////////////////////
+//une fois libre
+COPY    ~Lysre/Characters/Quete1/CKFelic2.cre~ ~override/CKFelic2.cre~ //Ajout du perso
+  SAY NAME1 ~F√©licia~
+  SAY NAME2 ~F√©licia~
 
-//Ajout du PC dragon. Lysre dans ToB//////////////////////////////////////////////////////////////////////////////////
-ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN
-BEGIN
+COMPILE ~Lysre/Dialogue/Quete1/CKFelic2.d~ //Ajout dialogue
+
+//Ajout des suivants
+COPY    ~Lysre/Characters/Quete1/CKFidelF.cre~ ~override/CKFidelF.cre~ //Ajout du perso
+  SAY NAME1 ~Adepte de tiamat~
+  SAY NAME2 ~Adepte de tiamat~
+
+COPY    ~Lysre/Characters/Quete1/CKFidelH.cre~ ~override/CKFidelH.cre~ //Ajout du perso
+  SAY NAME1 ~Adepte de tiamat~
+  SAY NAME2 ~Adepte de tiamat~
+
+COMPILE ~Lysre/Dialogue/Quete1/CKfidele.d~ //Ajout dialogue
+
+//Ajout du garde en prison
+COPY    ~Lysre/Characters/Quete1/CKBAMN.cre~ ~override/CKBAMN.cre~ //Ajout du personn
+  SAY NAME1 ~Gardien~
+  SAY NAME2 ~Gardien~
+
+COMPILE ~Lysre/Dialogue/Quete1/CKGarde.d~ //Ajout dialogue
+
+//Ajout des kobolds
+COPY    ~Lysre/Characters/Quete1/CKKobold.cre~ ~override/CKKobold.cre~ //Ajout du perso
+  SAY NAME1 ~Kobold~
+  SAY NAME2 ~Kobold~
+COPY    ~Lysre/Characters/Quete1/CKKobol2.cre~ ~override/CKKobol2.cre~ //Ajout du perso
+  SAY NAME1 ~Shaman Kobold~
+  SAY NAME2 ~Shaman Kobold~
+
+COPY    ~Lysre/Characters/Quete1/CKVarsco.cre~ ~override/CKVarsco.cre~ //Ajout du perso
+  SAY NAME1 ~Varscona~
+  SAY NAME2 ~Varscona~
+
+COMPILE ~Lysre/Dialogue/Quete1/CKVarsco.d~ //Ajout dialogue
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+//Ajout de la fonction temple de Tiamat////////////////////////////////////////////////
+
+COPY ~Lysre/boutiques/CKtiamat.STO~ ~override/CKtiamat.STO~
+  SAY NAME2 ~Temple de Tiamat~
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+//Ajout des ecailles manquantes aux dragons
+//Irenicus
+COPY_EXISTING ~DRAGBLAC.cre~ ~override/DRAGBLAC.cre~
+  ADD_CRE_ITEM ~SCALEB~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+
+//  ADD_CRE_ITEM ~Nom de l'item~ #charge1 #charge2 #charge3 ~Flags~ ~Inventory Slots~ [EQUIP] [TWOHANDED]
+
+//Saladrex TdG
+COPY_EXISTING ~GORSAL.cre~ ~override/GORSAL.cre~
+  ADD_CRE_ITEM ~SCALER~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Ajout du PC dragon. Lysre
+COPY ~Lysre/Portrait~ ~override~ //Ajout des portait
+
+COPY ~Lysre/Characters/CKLysre.cre~ ~override/CKLysre.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+//Test programme
+WRITE_ASCII 0x248 ~CKLysreS~ #8  // override script where you put all the commands for lovetalks and such.
+WRITE_ASCII 0x2cc ~CKLysre~  #8  // dialogue file where we'll put Branwen's greeting dialogue.
+WRITE_ASCII 0x280 ~CKLysre~  #32 // death variable - when we want to refer to Branwen in the game
+
+COMPILE EVALUATE_BUFFER ~Lysre/Dialogue/BCKLysre.d~
+						~Lysre/Dialogue/CKLysre.d~
+						~Lysre/Dialogue/CKLysreJ.d~
+						~Lysre/Dialogue/CKLysreP.d~
+						~Lysre/Scripts/CKLysreF.baf~
+						~Lysre/Scripts/CKLysreS.baf~
+
+//Modification des maps
+
+//Apparition du PC et des NPC
+//Lysre
+EXTEND_TOP ~AR0710.bcs~ ~Lysre/Scripts/AR0710.baf~
+
+//NPC quete 1
+
+EXTEND_TOP ~AR0202.bcs~ ~Lysre/Scripts/AR0202.baf~
+EXTEND_TOP ~AR1005.bcs~ ~Lysre/Scripts/AR1005.baf~ //Prison
+EXTEND_TOP ~AR0406.bcs~ ~Lysre/Scripts/AR0406.baf~ //CdC
+
+///////////////////////////////////////////////////////////
+
+//Ajout du PC dragon. Lysre dans ToB////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
 
 COPY ~Lysre/Characters/CKLysr25.cre~ ~override/CKLysr25.cre~
 SAY NAME1 @1
@@ -230,24 +267,26 @@ SAY TARGET_IMMUNE @41
 SAY INVENTORY_FULL @42
 SAY SPELL_DISRUPTED @43
 SAY BIO @44
+
 COMPILE EVALUATE_BUFFER ~Lysre/Dialogue/BCKLys25.d~
-                	~Lysre/Dialogue/CKLysr25.d~
-                	~Lysre/Dialogue/CKLys25J.d~
-                	~Lysre/Dialogue/CKLys25P.d~
-	                ~Lysre/Scripts/CKLys25S.baf~
+						~Lysre/Dialogue/CKLysr25.d~
+						~Lysre/Dialogue/CKLys25J.d~
+						~Lysre/Dialogue/CKLys25P.d~
+						~Lysre/Scripts/CKLys25S.baf~
 
-//AJout des dialogues avec NPC de l'EE///
-ACTION_IF GAME_IS ~BG2EE eet~ BEGIN    //
-COMPILE	~Lysre/Dialogue/LysreEE.d~     //
-END                                    //
-/////////////////////////////////////////
+//AJout des dialogues avec NPC de l'EE
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+COMPILE	~Lysre/Dialogue/LysreEE.d~
+END
 
-EXTEND_TOP ~AR6200.bcs~ ~Lysre/Scripts/AR6200.baf~//Apparition du NPC dans TOB (inutile)
+//////////////////////////////////////
+
+EXTEND_TOP ~AR6200.bcs~ ~Lysre/Scripts/AR6200.baf~ //Apparition du NPC dans TOB (inutile)
 
 COPY ~Lysre/Epilogue/CKLysrzz.2da~ ~override/CKLysr01.2da~
 REPLACE ~99999~ @45
 
-END
+END // ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~
 
 APPEND ~interdia.2da~ ~CKLysre       BCKLysre       BCKLys25~
 UNLESS ~CKLysre~
@@ -279,9 +318,9 @@ END ELSE BEGIN
   COMPILE ~Lysre/Dialogue/FATESP.d~ USING ~Lysre/%LANGUAGE%/CKLys25J.tra~
 END
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Ajout des objets ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+//Ajout des objets //////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/ecaille1.itm~ ~override~
   SAY NAME1 @2000
   SAY NAME2 @2000
@@ -295,25 +334,29 @@ COPY ~Lysre/items/coeur1.itm~ ~override~
 
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/coeur2.itm~ ~override~
-  SAY NAME1 ~Coeurs de demons~
-  SAY NAME2 ~Coeurs de demons~
-  SAY DESC ~Vous avez vu Lysre arracher le coeur d'un demon et l'avaler d'un bloc. Depuis vous sentez parfois comme les echos d'une multitude de battements provenant d'elle. 
-C'est toujours a ce moment qu'elle vous observe en souriant, comme si la sentation de malaise que vous resentez l'amuse.~
+  SAY NAME1 ~Coeurs de d√©mons~
+  SAY NAME2 ~Coeurs de d√©mons~
+  SAY DESC ~Vous avez vu Lysre arracher le coeur d'un d√©mon et l'avaler d'un bloc. Depuis vous sentez parfois comme les √©chos d'une multitude de battements provenant d'elle.
+C'est toujours √† ce moment qu'elle vous observe en souriant, comme si la sensation de malaise que vous ressentez l'amuse.~
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/ecaille2.itm~ ~override~
   SAY NAME1 @2004
   SAY NAME2 @2004
   SAY DESC  @2005
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/ecaillb1.itm~ ~override~
   SAY NAME1 @2000
   SAY NAME2 @2000
   SAY DESC  @2001
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/ecaillb2.itm~ ~override~
   SAY NAME1 @2006
   SAY NAME2 @2006
   SAY DESC  @2007
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/ecaillc1.itm~ ~override~
   SAY NAME1 @2000
@@ -324,64 +367,73 @@ COPY ~Lysre/items/ecaillc2.itm~ ~override~
   SAY NAME1 @2002
   SAY NAME2 @2002
   SAY DESC  @2003
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/acide1.itm~ ~override~
   SAY NAME1 @2011
   SAY NAME2 @2011
   SAY DESC  @2012
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/griffe1.itm~ ~override~
   SAY NAME1 @2008
   SAY NAME2 @2008
   SAY DESC  @2010
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/patte1.itm~ ~override~
   SAY NAME1 @2008
   SAY NAME2 @2008
   SAY DESC  @2009
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/patte2.itm~ ~override~
   SAY NAME1 @2013
   SAY NAME2 @2013
   SAY DESC  @2014
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/Boucle.itm~ ~override~
   SAY NAME1 @2015
   SAY NAME2 @2015
   SAY DESC  @2016
-        
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/CKBull.itm~ ~override~
   SAY NAME1 @2017
   SAY NAME2 @2017
   SAY DESC  @2018
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/Ecaille3.itm~ ~override~
   SAY NAME1 @2019
   SAY NAME2 @2019
   SAY DESC  @2020
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/Griffe2.itm~ ~override~
   SAY NAME1 @2021
   SAY NAME2 @2021
   SAY DESC  @2022
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/CKclef.itm~ ~override~
   SAY NAME1 @2023
   SAY NAME2 @2023
   SAY DESC  @2024
+
 /////////////////////////////////////////////////////////////////////
 COPY ~Lysre/items/CKioniqu.itm~ ~override~
   SAY NAME1 ~Pierre de chair~
   SAY NAME2 ~Pierre de chair~
-  SAY DESC  ~Cette pierre ionique degage l'odeur douceatre du sang pourri. Constiuee d'un melange de chair humaine et de sang de dragon d'argent, il s'aggit sans nul doute d'un objet profondement malefique. Seuls les individus voues au mal sont capables de profiter du simple enchantement de protection qu'elle dispense.
+  SAY DESC  ~Cette pierre ionique d√©gage l'odeur douce√¢tre du sang pourri. Constitu√©e d'un m√©lange de chair humaine et de sang de dragon d'argent, il s'agit sans nul doute d'un objet profondement mal√©fique. Seuls les individus vou√©s au mal sont capables de profiter du simple enchantement de protection qu'elle dispense.
 
 PARAMETRES :
 
 Bonus de Classe d'Armure : +1
 Poids : 2~
 
-//Ajout de sorts////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Ajout de sorts/////////////////////////////////////////////////////
 COPY ~Lysre/Sorts/CKsoufle.spl~ ~override~
   SAY NAME1 @3000 // nom avant identification pour les objets OU nom de sort
   SAY NAME2 @3000 // nom identifie pour les objets ; pas utilise pour les sorts
@@ -393,42 +445,42 @@ COPY ~Lysre/Sorts/CKsoin.spl~ ~override~
   SAY NAME2 @3002 // nom identifie pour les objets ; pas utilise pour les sorts
   SAY UNIDENTIFIED_DESC @3003  // description avant identification pour les objets, description de sort pour les sorts
   SAY DESC ~~ // description identifiee pour les objets, pas utilisee pour les sorts
-  
-  
-//INSTALLATION DU KIT PERSONNALISE DE DISCIPLE DE TIAMAT // Version revisitÈe avec l'aide de Derasiteur de la Couronne de Cuivre//////////////////////////
-ADD_KIT ~CKTiamat~                                                                                                               //
-// Armes autorisÈe (toutes, le NPC a des armes non deplacables)                                                                  //
-~CKTiamat 1 0 1 1 0 0 0 0~ //clasweap.2da                                                                                        //
-//Etoiles                                                                                                                        //
-~CKTiamat 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da  //
-// Pas de contraintes de caract, c'est un NPC                                                                                    //
- // ajoutÈ ‡ la fin de ABCLASRQ.2da                                                                                              //
- ~CKTiamat                1       1       1       1       1       1~                                                             //
- // ajoutÈ ‡ la fin de ABCLSMOD.2da                                                                                              //
- ~CKTiamat                1       1       1       1       1       1~                                                             //
- // ajoutÈ ‡ la fin de ABDCDSRQ.2da                                                                                              //
- ~CKTiamat                1       1       1       1       1       1~                                                             //
- // ajoutÈ ‡ la fin de ABDCSCRQ.2da                                                                                              //
- ~CKTiamat                1       1       1       1       1       1~                                                             //
- // ajoutÈ ‡ la fin de ALIGNMNT.2da                                                                                              //
- ~CKTiamat                1       1       1       1       1       1       1       1       1~                                     //
- // ajoutÈ ‡ la fin de DUALCLAS.2da                                                                                              //
- ~CKTiamat                0       0       0       0       0       0~                                                             //
- // chemin d'accËs vers votre fichier 2da de type CLAB                                                                           //
- ~Lysre/Kit/Tiamat.2da~                                                                                                          //
- // races et classes de PJ autorisÈes ‡ utiliser ce kit, provenant de KITTABLE.2da                                               //
- ~K_S_H~ // Kit de NPC, pas de Pj  -> ajoutÈ humain K_S_H pour tester.                                                           //
-// indicateurs d'utilisabilitÈ, ajoutÈ ‡ la fin  	de la nouvelle ligne dans    KITLIST.2da                                 //
- ~0x00004000	19~                                                                                                              //
- // Table de CHN ‡ utiliser. Voir LUABBR.2da                                                                                     //
- ~MA0~                                                                                                                           //
-~* * * * * * * * * * * * * * * * * * * *~                                                                                        //
-SAY @46 // nom kit                                                                                                               //
-SAY @46 // nom kit                                                                                                               //
-SAY @47 // Description kit                                                                                                       //
-                                                                                                                                 //
-//Application du kit dans l'EE                                                                                                   //
-ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN                                                                              //
-	LAF fl#add_kit_ee	STR_VAR	kit_name = CKTiamat	END                                                              //
-END                                                                                                                              //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//INSTALLATION DU KIT PERSONNALISE DE DISCIPLE DE TIAMAT // Version revisit√©e avec l'aide de Derasiteur de la Couronne de Cuivre
+ADD_KIT ~CKTiamat~
+// Armes autoris√©e (toutes, le NPC a des armes non deplacables)
+~CKTiamat 1 0 1 1 0 0 0 0~ //clasweap.2da
+//Etoiles
+~CKTiamat 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+// Pas de contraintes de caract, c'est un NPC
+ // ajout√© √† la fin de ABCLASRQ.2da
+ ~CKTiamat                1       1       1       1       1       1~
+ // ajout√© √† la fin de ABCLSMOD.2da
+ ~CKTiamat                1       1       1       1       1       1~
+ // ajout√© √† la fin de ABDCDSRQ.2da
+ ~CKTiamat                1       1       1       1       1       1~
+ // ajout√© √† la fin de ABDCSCRQ.2da
+ ~CKTiamat                1       1       1       1       1       1~
+ // ajout√© √† la fin de ALIGNMNT.2da
+ ~CKTiamat                1       1       1       1       1       1       1       1       1~
+ // ajout√© √† la fin de DUALCLAS.2da
+ ~CKTiamat                0       0       0       0       0       0~
+ // chemin d'acc√®s vers votre fichier 2da de type CLAB
+ ~Lysre/Kit/Tiamat.2da~
+ // races et classes de PJ autoris√©es √† utiliser ce kit, provenant de KITTABLE.2da
+ ~~ // Kit de NPC, pas de Pj  -> ajout√© humain K_S_H pour tester.
+// indicateurs d'utilisabilit√©, ajout√© √† la fin  	de la nouvelle ligne dans    KITLIST.2da
+ ~0x00004000	19~
+ // Table de CHN √† utiliser. Voir LUABBR.2da
+ ~MA0~
+~* * * * * * * * * * * * * * * * * * * *~
+SAY @46 // nom kit
+SAY @46 // nom kit
+SAY @47 // Description kit
+
+//Application du kit dans l'EE
+ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN
+	LAF fl#add_kit_ee	STR_VAR	kit_name = CKTiamat	END
+END
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

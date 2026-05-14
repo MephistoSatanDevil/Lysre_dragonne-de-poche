@@ -237,7 +237,7 @@ REPLACE_CRE_ITEM ~CKaillc1~ #0 #0 #0 ~identified&unstealable&undroppable~ ~cloak
 REPLACE_CRE_ITEM ~CKBoucle~ #0 #0 #0 ~identified&unstealable&undroppable~ ~qitem1~ // TODO item_use ?
 WRITE_ASCII 0x034 ~CKLysreS~ (8)	// Small portrait
 WRITE_ASCII 0x03c ~CKLysreL~ (8)	// Large portrait
-	WRITE_LONG 0x28 IDS_OF_SYMBOL ("ANIMATE" "CKLysre_dragon")
+	WRITE_LONG 0x28 IDS_OF_SYMBOL ("ANIMATE" "CKLysre_dragon_juvenile")
 
 
 //Test programme

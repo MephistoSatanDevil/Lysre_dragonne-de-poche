@@ -5,7 +5,9 @@ PRINT ~Install Animations~
 		INCLUDE ~Lysre/lib/a7_functions.tpa~
 
     ACTION_DEFINE_ASSOCIATIVE_ARRAY anim_to_min_slot BEGIN
-        ~CKLysre_dragon~ => ~0x7000~
+        ~CKLysre_dragon_juvenile~ => ~0x7000~
+        ~CKLysre_dragon~ => ~0xa000~
+        ~CKLysre_dragon_green~ => ~0xa000~
     END
 
     ACTION_PHP_EACH anim_to_min_slot AS animation => min_slot

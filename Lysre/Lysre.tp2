@@ -532,6 +532,10 @@ COPY ~Lysre/Sorts/CKsoin.spl~ ~override~
   SAY DESC ~~ // description identifiee pour les objets, pas utilisee pour les sorts
 
 COPY ~Lysre/Sorts/CKTiamat.spl~ ~override~
+		LPF ADD_SPELL_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (~Disciple de Tiamat~)
+		END
 
 
 //INSTALLATION DU KIT PERSONNALISE DE DISCIPLE DE TIAMAT // Version revisitée avec l'aide de Derasiteur de la Couronne de Cuivre 
@@ -551,11 +555,11 @@ STR_VAR
 // Étoiles / Point de compétence
   weapprof  = ~0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
 // Pas de contraintes de caractéristique, c'est un NPC
-  abclasrq  = ~1       1       1       1       1       1~
+  abclasrq  = ~1       1       1       17       1       15~
   abclsmod  = ~1       1       1       1       1       1~ 
   abdcdsrq  = ~1       1       1       1       1       1~
   abdcscrq  = ~1       1       1       1       1       1~
-  alignmnt  = ~1       1       1       1       1       1       1       1       1~
+  alignmnt  = ~0       0       1       0       0       1       0       0       1~
 // Pas de jumelage
   dualclas  = ~0       0       0       0       0       0~
   clab_path = EVAL ~Lysre/Kit/CKTiam.2da~

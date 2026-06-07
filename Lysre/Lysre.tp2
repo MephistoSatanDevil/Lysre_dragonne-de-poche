@@ -74,7 +74,9 @@ AUTO_TRA ~weidu_external/Lysre/Languages/autotra/%s~
 LANGUAGE ~French~
 		 ~French~
 		 ~Lysre/Languages/French/Setup-Lysre.tra~
-
+LANGUAGE ~Simplified Chinese~
+		 ~SChinese~
+		 ~Lysre/Languages/SChinese/Setup-Lysre.tra~
 // Fin bloc langues  ////////////////////////////////////////
 
 
